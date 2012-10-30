@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+
+    <script src="/nowjs/now.js"></script>
+    <script type="text/javascript">
+   
+     function runCode(){
+       var codeArea = document.getElementById("code");
+       var logArea = document.getElementById("output");
+       //alert("executing .."+codeArea.value);
+       logArea.value = "waiting for compiler......";
+       now.compileCode(codeArea.value); 
+    
+     }
+    
+    function saveCode(){
+      var filename = document.getElementById("filename").value;
+      var code = document.getElementById("code").value;
+      now.saveCode(filename,code);
+    }
+
+    function loadCode(){
+      var filename = document.getElementById("filename").value;
+      var code = document.getElementById("code");
+      code.value = now.loadCode(filename);
+    }
+
+     now.receiveOutput = function(name, message){
+       if(name != "msg")
+          return;
+       console.log(message);
+            
+       var logArea = document.getElementById("output");
+       logArea.value = logArea.value + " \n  "+ message;
+
+      }
+     </script>
+    <!-- styles -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
+  <body>
+<%- body %>
+  </body>
+</html>
