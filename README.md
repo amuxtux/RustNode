@@ -9,10 +9,13 @@ How to Setup
 
 How to run
 ===========
-  install node.js  (nodejs.org for details)
-  clone repository
-  node app.js
-  open localhost:3000 in browser , it should show you text edit page
+install node.js  (nodejs.org for details)
+
+clone repository
+
+node app.js
+
+open localhost:3000 in browser , it should show you text edit page
 
 
 issues
