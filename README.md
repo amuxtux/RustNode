@@ -17,7 +17,7 @@ How to run
 
 issues
 =========
-It is developed it on mac system so it should work without any problem on Mac 
+It is developed on mac system so it should work without any problem on Mac 
 however for linux , the node module have to be re-installed. just delete the node_module 
 directory contents and reinstall express, now, stylus, ejs , highlight node modules.
 
